@@ -21,7 +21,7 @@ const KeywordFinder = () => {
       const requestOptions = {
         method: "GET",
         params: { keywords: `${searchTerm}`, limit:100},
-        url: "http://localhost:5000/results",
+        url: "https://keyword-finder.onrender.com/results",
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
@@ -29,8 +29,6 @@ const KeywordFinder = () => {
 
       const response = await axios.request(requestOptions);
       const list = response.data.results;
-
-      console.log(list);
 
       const totalviews = list.reduce((totalViews, listing) => totalViews + listing.views, 0);
 

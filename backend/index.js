@@ -9,7 +9,7 @@ const dotenv = require('dotenv');
 const app = express();
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://localhost:3000"],
+    origin: ["http://localhost:3000", "https://similar-word-finder.netlify.app", "http://similar-word-finder.netlify.app", "https://localhost:3000"],
     credentials: true
 }));
 
